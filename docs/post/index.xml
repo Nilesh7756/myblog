@@ -7,19 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
-    <lastBuildDate>Thu, 17 Sep 2015 13:47:08 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 17 Aug 2017 13:47:08 +0200</lastBuildDate>
     
 	<atom:link href="https://nilesh7756.github.io/myblog/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Go is for lovers</title>
-      <link>https://nilesh7756.github.io/myblog/post/go-is-for-lovers/</link>
-      <pubDate>Thu, 17 Sep 2015 13:47:08 +0200</pubDate>
+      <title>Copy directories and files to and from Kubernetes Container [POD]</title>
+      <link>https://nilesh7756.github.io/myblog/post/cp-dir-file-kube/</link>
+      <pubDate>Thu, 17 Aug 2017 13:47:08 +0200</pubDate>
       
-      <guid>https://nilesh7756.github.io/myblog/post/go-is-for-lovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
+      <guid>https://nilesh7756.github.io/myblog/post/cp-dir-file-kube/</guid>
+      <description>As we all know about SCP Linux command to Copy the files and directories from a remote host to the local host and vice versa over SSH. Similar to that we have ‘KUBECTL CP’ to Copy the files and directories from a Kubernetes Container [POD] to the local host and vice versa.
+Syntax: kubectl cp &amp;lt;file-spec-src&amp;gt; &amp;lt;file-spec-dest&amp;gt;  POD in a specific container
+kubectl cp &amp;lt;file-spec-src&amp;gt; &amp;lt;file-spec-dest&amp;gt; -c &amp;lt;specific-container&amp;gt;  Copy /tmp/foo local file to /tmp/bar in a remote pod in namespace</description>
     </item>
     
   </channel>
