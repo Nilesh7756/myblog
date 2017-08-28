@@ -10,11 +10,11 @@ This Blog will help you for installation of up and running with a local **Python
 The programming language Python was conceived in the late 1980s and its implementation was started in **December 1989**. **Python 3.0** (also called "Python 3000" or "Py3K") was released on **December 3, 2008**.
 Python 3 is the most current version of the language and is considered to be the future of Python.
 
-##### **Prerequisites**
+**Prerequisites**
 Computer with CentOS 7.x installed with non-root superuser account that is connected to the internet.
 *Note: Here we have used Amazon Linux AMI [CentOS 7 image]*
 
-##### **Step 1 : Set-up installation for Python3.6.2**
+**Step 1 : Set-up installation for Python3.6.2**
 
 *Note*: We can install any of python version 3.x, download it **[from here](https://www.python.org/ftp/python/)**. In this blog we are installing **python version 3.6.2**.
 
