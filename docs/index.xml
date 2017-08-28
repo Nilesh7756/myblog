@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
-    <lastBuildDate>Thu, 17 Aug 2017 13:47:08 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 28 Aug 2017 13:47:08 +0200</lastBuildDate>
     
 	<atom:link href="https://nilesh7756.github.io/myblog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installation of Python 3.x (specific version) on CentOS 7</title>
+      <link>https://nilesh7756.github.io/myblog/post/install-python-3-centos-7/</link>
+      <pubDate>Mon, 28 Aug 2017 13:47:08 +0200</pubDate>
+      
+      <guid>https://nilesh7756.github.io/myblog/post/install-python-3-centos-7/</guid>
+      <description>This Blog will help you for installation of up and running with a local Python 3.x programming environment in CentOS 7.x.
+The programming language Python was conceived in the late 1980s and its implementation was started in December 1989. Python 3.0 (also called &amp;ldquo;Python 3000&amp;rdquo; or &amp;ldquo;Py3K&amp;rdquo;) was released on December 3, 2008. Python 3 is the most current version of the language and is considered to be the future of Python.</description>
+    </item>
     
     <item>
       <title>Copy directories and files to and from Kubernetes Container [POD]</title>
@@ -21,16 +31,6 @@
       <description>As we all know about SCP Linux command to Copy the files and directories from a remote host to the local host and vice versa over SSH. Similar to that we have ‘KUBECTL CP’ to Copy the files and directories from a Kubernetes Container [POD] to the local host and vice versa.
 Syntax: kubectl cp &amp;lt;file-spec-src&amp;gt; &amp;lt;file-spec-dest&amp;gt;  POD in a specific container
 kubectl cp &amp;lt;file-spec-src&amp;gt; &amp;lt;file-spec-dest&amp;gt; -c &amp;lt;specific-container&amp;gt;  Copy /tmp/foo local file to /tmp/bar in a remote pod in namespace</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://nilesh7756.github.io/myblog/post/install-python-3-centos-7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nilesh7756.github.io/myblog/post/install-python-3-centos-7/</guid>
-      <description>Installation of Python 3.x (specific version) on CentOS 7 This Blog will help you for installation of up and running with a local Python 3.x programming environment in CentOS 7.x.
-The programming language Python was conceived in the late 1980s and its implementation was started in December 1989. Python 3.0 (also called &amp;ldquo;Python 3000&amp;rdquo; or &amp;ldquo;Py3K&amp;rdquo;) was released on December 3, 2008. Python 3 is the most current version of the language and is considered to be the future of Python.</description>
     </item>
     
     <item>
