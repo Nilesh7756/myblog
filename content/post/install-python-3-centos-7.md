@@ -49,11 +49,11 @@ Configuration of python
         
 Check installation 
 
-    python3.6 --version
+	python3.6 --version
     
 
 **Congratulations!!** We have made it Successful..
 
 
-Creating a Simple Program **Hello World** Python Program [click here]
+**COOL** let's write Simple **Hello World** Python Program [click here]
 
