@@ -23,5 +23,15 @@ Syntax: kubectl cp &amp;lt;file-spec-src&amp;gt; &amp;lt;file-spec-dest&amp;gt; 
 kubectl cp &amp;lt;file-spec-src&amp;gt; &amp;lt;file-spec-dest&amp;gt; -c &amp;lt;specific-container&amp;gt;  Copy /tmp/foo local file to /tmp/bar in a remote pod in namespace</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://nilesh7756.github.io/myblog/post/install-python-3-centos-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nilesh7756.github.io/myblog/post/install-python-3-centos-7/</guid>
+      <description>Installation of Python 3.x (specific version) on CentOS 7 This Blog will help you for installation of up and running with a local Python 3.x programming environment in CentOS 7.x.
+The programming language Python was conceived in the late 1980s and its implementation was started in December 1989. Python 3.0 (also called &amp;ldquo;Python 3000&amp;rdquo; or &amp;ldquo;Py3K&amp;rdquo;) was released on December 3, 2008. Python 3 is the most current version of the language and is considered to be the future of Python.</description>
+    </item>
+    
   </channel>
 </rss>

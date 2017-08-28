@@ -1,0 +1,214 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nilesh&#39;s BLOG </title>
+        <meta name="author">
+        <meta name="description" content="The awesome blog of Nilesh Suryavanshi">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Hugo 0.26" />
+        <link href="https://nilesh7756.github.io/myblog/post/index.xml" rel="alternate" type="application/rss+xml" title="Nilesh&#39;s BLOG " />
+        <link href="https://nilesh7756.github.io/myblog/post/index.xml" rel="feed" type="application/rss+xml" title="Nilesh&#39;s BLOG " />
+        <link href='//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://nilesh7756.github.io/myblog/css/styles.css">
+        <link rel="icon" href="https://nilesh7756.github.io/myblog/favicon.ico">
+        <link rel="apple-touch-icon" href="https://nilesh7756.github.io/myblog/apple-touch-icon.png" />
+        <link rel="stylesheet" href="https://nilesh7756.github.io/myblog/css/highlightjs/monokai.css">
+        <script src="https://nilesh7756.github.io/myblog/js/vendor/modernizr-2.8.0.min.js"></script>
+        
+        <style>
+        .site-header h2 .logo {
+        background: url(https://nilesh7756.github.io/myblog/img/desk.jpg) no-repeat 0 0;
+        }
+        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+          .site-header h2 .logo {
+            background-image: url(https://nilesh7756.github.io/myblog/img/desk.jpg);
+        }}
+       .site-header {
+         background: #2a373d url(https://nilesh7756.github.io/myblog/img/desk.jpg) no-repeat center center;
+         z-index: -1;
+        }
+        </style>
+    </head>
+    <body>
+        
+        <header class="site-header">
+          <div class="transparent-layer">
+              <h2>Nilesh Suryavanshi</h2>
+          </div>
+        </header>
+
+
+<div class="container clearfix">
+    <main role="main" class="content">
+        <article class="post">
+            <a class="btn home" href="https://nilesh7756.github.io/myblog/" title="Back to home">&laquo; Back to home</a>
+            
+<h1><a href="https://nilesh7756.github.io/myblog/post/install-python-3-centos-7/" title=""></a></h1>
+
+<footer class="post-info">Posted on <span class="post-meta"><time datetime="0001.01.01">0001.01.01</time>
+
+</span>
+</footer>
+
+            
+
+<h2 id="installation-of-python-3-x-specific-version-on-centos-7">Installation of Python 3.x (specific version) on CentOS 7</h2>
+
+<p>This Blog will help you for installation of up and running with a local <strong>Python 3.x</strong> programming environment in <strong>CentOS 7.x</strong>.</p>
+
+<p>The programming language Python was conceived in the late 1980s and its implementation was started in <strong>December 1989</strong>. <strong>Python 3.0</strong> (also called &ldquo;Python 3000&rdquo; or &ldquo;Py3K&rdquo;) was released on <strong>December 3, 2008</strong>.
+Python 3 is the most current version of the language and is considered to be the future of Python.</p>
+
+<h5 id="prerequisites"><strong>Prerequisites</strong></h5>
+
+<p>Computer with CentOS 7.x installed with non-root superuser account that is connected to the internet.
+<em>Note: Here we have used Amazon Linux AMI [CentOS 7 image]</em></p>
+
+<h5 id="step-1-set-up-installation-for-python3-6-2"><strong>Step 1 : Set-up installation for Python3.6.2</strong></h5>
+
+<p><em>Note</em>: We can install any of python version 3.x, download it <strong><a href="https://www.python.org/ftp/python/">from here</a></strong>. In this blog we are installing <strong>python version 3.6.2</strong>.</p>
+
+<p>Go to &lsquo;/usr/src&rsquo; path</p>
+
+<pre><code>    cd /usr/src
+</code></pre>
+
+<p>Download <strong><a href="https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz">python version 3.6.2</a></strong>.</p>
+
+<pre><code>    sudo wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
+</code></pre>
+
+<p>untar downloaded package</p>
+
+<pre><code>    sudo tar -xvf Python-3.6.2.tar.xz
+</code></pre>
+
+<p>Go to &lsquo;Python-3.6.2&rsquo; path</p>
+
+<pre><code>    cd Python-3.6.2
+</code></pre>
+
+<p>Installation of gcc compiler and  openssl-devel</p>
+
+<pre><code>    sudo yum install gcc
+
+    sudo yum install openssl-devel
+</code></pre>
+
+<p>Configuration of python</p>
+
+<pre><code>    sudo ./configure --prefix=/opt/python3
+
+    sudo make altinstall
+
+    sudo ln -s /opt/python3/bin/python3.6 /usr/bin/python3.6
+</code></pre>
+
+<p>Check installation</p>
+
+<pre><code>python3.6 --version
+</code></pre>
+
+<p><strong>Congratulations!!</strong> We have made it Successful..</p>
+
+<p>Creating a Simple Program <strong>Hello World</strong> Python Program [click here]</p>
+
+            <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2finstall-python-3-centos-7%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=&amp;url=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2finstall-python-3-centos-7%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2finstall-python-3-centos-7%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google&#43;"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2finstall-python-3-centos-7%2f&title=" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
+        </article>
+        <div class="comments">
+            <h3>Comments</h3>
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nileshkube" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </main>
+    <aside class="author">
+  <img class="profile-image" src="https://nilesh7756.github.io/myblog/img/profile-image.png" alt="Nilesh Suryavanshi" />
+  <p class="name">by 
+  <strong>Nilesh Suryavanshi</strong></p>
+  <p class="address">India</p>
+  <p class="link"></p>
+  <ul class="social">
+    
+<li><a href="//twitter.com/nilesh7756" class="icon-twitter" target="_blank" title="Twitter"></a></li>
+
+
+
+
+
+<li><a href="//linkedin.com/in/nilesh-suryavanshi-69ba5262" class="icon-linkedin" target="_blank" title="Linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+<li><a href="//github.com/nilesh7756" class="icon-github" target="_blank" title="Github"></a></li>
+
+
+
+
+<li><a href="https://nilesh7756.github.io/myblog/post/index.xml" class="icon-rss" target="_blank" title="RSS"></a></li>
+
+  </ul>
+  <br><br>
+</aside>
+
+</div>
+
+<footer class="main-footer">
+  <div class="container clearfix">
+        <a class="icon-rss" href="https://nilesh7756.github.io/myblog/post/index.xml" title="RSS"></a>
+        <p>&copy; 2017 &middot; Powered by <a href="http://gohugo.io">Hugo</a>.</p>
+  </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>window.jQuery || document.write('<script src="https:\/\/nilesh7756.github.io\/myblog\/js\/vendor\/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="https://nilesh7756.github.io/myblog/js/plugins.js"></script>
+
+
+
+
+</body>
+</html>
+
