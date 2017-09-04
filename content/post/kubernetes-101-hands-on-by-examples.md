@@ -1,7 +1,7 @@
 +++
 date = "2017-09-04T13:47:08+02:00"
 tags = []
-title = "KUBERNETE 101 : Hands on by Examples"
+title = "KUBERNETES 101 : Hands on by Examples"
 +++
 
 
