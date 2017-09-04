@@ -45,86 +45,81 @@
         <article class="post">
             <a class="btn home" href="https://nilesh7756.github.io/myblog/" title="Back to home">&laquo; Back to home</a>
             
-<h1><a href="https://nilesh7756.github.io/myblog/post/install-python-3-centos-7/" title="Installation of Python 3.x (specific version) on CentOS 7">Installation of Python 3.x (specific version) on CentOS 7</a></h1>
+<h1><a href="https://nilesh7756.github.io/myblog/post/kubernetes-101-hands-on-by-examples/" title="KUBERNETE 101 : Hands on by Examples">KUBERNETE 101 : Hands on by Examples</a></h1>
 
-<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.08.28">2017.08.28</time>
+<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.09.04">2017.09.04</time>
 
     
 
 </span>
 </footer>
 
-            <p>This Blog will help you for installation of up and running with a local <strong>Python 3.x</strong> programming environment in <strong>CentOS 7.x</strong>.</p>
+            <p>For Creation of <a href="https://medium.com/google-cloud/how-to-create-google-container-engine-gke-using-the-google-cloud-platform-console-925dd1cc9400">Kubernetes cluster (GKE) on Goolge Cloud Platform please follow link</a>.</p>
 
-<p>The programming language Python was conceived in the late 1980s and its implementation was started in <strong>December 1989</strong>. <strong>Python 3.0</strong> (also called &ldquo;Python 3000&rdquo; or &ldquo;Py3K&rdquo;) was released on <strong>December 3, 2008</strong>.
-Python 3 is the most current version of the language and is considered to be the future of Python.</p>
+<p><strong><em>Note:</em></strong> Do not execute <strong>“kubectl proxy”</strong> command on Google Cloud shell (Work station)</p>
 
-<p><strong>Prerequisites</strong>
-Computer with CentOS 7.x installed with non-root superuser account that is connected to the internet.
-<em>Note: Here we have used Amazon Linux AMI [CentOS 7 image]</em></p>
+<p>On Google Cloud shell create directory <strong>demo-kube</strong></p>
 
-<p><strong>Step 1 : Set-up installation for Python3.6.2</strong></p>
-
-<p><em>Note</em>: We can install any of python version 3.x, download it <strong><a href="https://www.python.org/ftp/python/">from here</a></strong>. In this blog we are installing <strong>python version 3.6.2</strong>.</p>
-
-<p>Go to &lsquo;/usr/src&rsquo; path</p>
-
-<pre><code>    cd /usr/src
+<pre><code>mkdir demo-kube
+cd demo-kube
 </code></pre>
 
-<p>Download <strong><a href="https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz">python version 3.6.2</a></strong>.</p>
+<p>Create “demo-namespace” <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/">Kubernetes namespace</a></p>
 
-<pre><code>    sudo wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
+<pre><code>wget https://raw.githubusercontent.com/Nilesh7756/k8s-sample-php-demo/master/sample-namespace.yaml
+
+kubectl create -f sample-namespace.yaml
+
+kubectl get namespace
 </code></pre>
 
-<p>untar downloaded package</p>
+<p>Create <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">Kubernetes Deployment</a> for sample php Application</p>
 
-<pre><code>    sudo tar -xvf Python-3.6.2.tar.xz
+<pre><code>wget https://raw.githubusercontent.com/Nilesh7756/k8s-sample-php-demo/master/demo-sample-php.yaml
+
+kubectl create -f demo-sample-php.yaml
+
+kubectl get deployment -n demo-namespace
 </code></pre>
 
-<p>Go to &lsquo;Python-3.6.2&rsquo; path</p>
+<p>Get <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod/">Kubernetes POD</a> which were created when deployment kind was created</p>
 
-<pre><code>    cd Python-3.6.2
+<pre><code>kubectl get pods -n demo-namespace
 </code></pre>
 
-<p>Installation of gcc compiler and  openssl-devel</p>
+<p>Create <a href="https://kubernetes.io/docs/concepts/services-networking/service/">Kubernetes Service</a> to access deployment pods externally.</p>
 
-<pre><code>    sudo yum install gcc
+<pre><code>wget https://raw.githubusercontent.com/Nilesh7756/k8s-sample-php-demo/master/demo-sample-php-svc.yaml
 
-    sudo yum install openssl-devel
+kubectl create -f demo-sample-php-svc.yaml
+
+kubectl get svc -n demo-namespace
 </code></pre>
 
-<p>Configuration of python</p>
+<p>Once external IP recieved from above get command, hit external IP in browser</p>
 
-<pre><code>    sudo ./configure --prefix=/opt/python3
+<p>Delete Kubernetes Resources</p>
 
-    sudo make altinstall
+<pre><code>kubectl delete -f demo-sample-php-svc.yaml
 
-    sudo ln -s /opt/python3/bin/python3.6 /usr/bin/python3.6
+kubectl delete -f demo-sample-php.yaml
+
+kubectl delete -f sample-namespace.yaml
 </code></pre>
-
-<p>Check installation</p>
-
-<pre><code>python3.6 --version
-</code></pre>
-
-<p><strong>Congratulations!!</strong> We have made it Successful..</p>
-
-<p><strong>COOL</strong> let&rsquo;s write Simple <strong>Hello World</strong> Python Program [click here]</p>
 
             <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2finstall-python-3-centos-7%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2fkubernetes-101-hands-on-by-examples%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Installation%20of%20Python%203.x%20%28specific%20version%29%20on%20CentOS%207&amp;url=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2finstall-python-3-centos-7%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=KUBERNETE%20101%20%3a%20Hands%20on%20by%20Examples&amp;url=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2fkubernetes-101-hands-on-by-examples%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2finstall-python-3-centos-7%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google&#43;"></a>
+        <a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2fkubernetes-101-hands-on-by-examples%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google&#43;"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2finstall-python-3-centos-7%2f&title=Installation%20of%20Python%203.x%20%28specific%20version%29%20on%20CentOS%207" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fnilesh7756.github.io%2fmyblog%2fpost%2fkubernetes-101-hands-on-by-examples%2f&title=KUBERNETE%20101%20%3a%20Hands%20on%20by%20Examples" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
